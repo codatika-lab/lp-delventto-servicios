@@ -691,6 +691,20 @@ Esta evaluación documenta el uso técnico actual. Cualquier cambio que conviert
       grid-row: span 7;
       border-radius: 16px 16px 120px 120px;
     }
+    .style-elegante.skin-servicios-locales .gallery-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-auto-rows: auto;
+    }
+    .style-elegante.skin-servicios-locales .gallery-item {
+      grid-column: auto;
+      grid-row: auto;
+      min-height: 0;
+      aspect-ratio: 4 / 3;
+      border: 1px solid color-mix(in srgb, var(--secondary) 42%, transparent);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+    .style-elegante.skin-servicios-locales .gallery-item img { min-height: 0; }
     .style-elegante .gallery-item img { filter: saturate(0.72) contrast(1.04); }
     .style-elegante .gallery-item figcaption {
       padding: 70px 24px 22px;
@@ -883,6 +897,8 @@ Esta evaluación documenta el uso técnico actual. Cualquier cambio que conviert
       .style-elegante.skin-tienda-catalogo .gallery-item { grid-column: auto; grid-row: auto; aspect-ratio: 1 / 1; }
       .style-elegante.skin-tienda-catalogo .gallery-item:nth-child(2),
       .style-elegante.skin-tienda-catalogo .gallery-item:nth-child(5) { grid-column: auto; grid-row: auto; aspect-ratio: 1 / 1; }
+      .style-elegante.skin-servicios-locales .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .style-elegante.skin-servicios-locales .gallery-item figcaption { padding-bottom: 76px; }
       .style-elegante .testimonios-grid,
       .style-elegante[data-testimonial-layout="simetrica"] .testimonios-grid { grid-template-columns: 1fr; }
       .style-elegante[data-testimonial-layout="simetrica"] .testimonio,
@@ -900,6 +916,7 @@ Esta evaluación documenta el uso técnico actual. Cualquier cambio que conviert
     }
 
     @media (max-width: 420px) {
+      .style-elegante.skin-servicios-locales .gallery-grid { grid-template-columns: 1fr; }
       .style-elegante .grid-items { gap: 30px 12px; }
       .style-elegante .card { padding: 0; border-radius: 0; }
       .style-elegante .card h3 { font-size: 15px; }
